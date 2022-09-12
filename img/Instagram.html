@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Instagram_files/styles.css">
+    <title>Instagram</title>
+
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <div class="container-imagens">
+        <img src="./Instagram_files/celular.png" class="img-celular">
+        <img src="./Instagram_files/insta1.png" class="imagem-celular">
+        <img src="./Instagram_files/insta2.png" class="imagem-celular" id="troca-imagem" style="opacity: 0;">
+    </div>
+
+    <div class="container-itens">
+        <div class="container-form">
+            <img src="./Instagram_files/insta-logo.png" class="insta-logo">
+
+            <input placeholder="Telefone, nome de usuario ou e-mail">
+            <input placeholder="Senha">
+
+            <button>Entrar</button>
+
+            <a class="login-facebook">Entrar com o Facebook</a>
+            <a class="esqueceu-senha">Esqueceu a senha?</a>
+
+        </div>
+
+        <div class="container-cadastro">
+
+            <p class="paragrafo-conta">Não tem uma conta?</p> <a class="link-cadastro">Cadastra-se</a>
+
+        </div>
+
+        <p class="paragrafo-app">Obtenha o aplicativo.</p>
+
+        <div class="container-app">
+            <img src="./Instagram_files/ios.png" alt="logo do ios" class="logo-app">
+            <img src="./Instagram_files/google.png" alt="logo do google" class="logo-app">
+        </div>
+
+    </div>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<script>
+    let imagem = document.getElementById("troca-imagem")
+
+
+    function trocaImagem() {
+
+        if (imagem.style.opacity == 0) {
+            imagem.style.opacity = 1
+        }
+
+        else {
+            imagem.style.opacity = 0
+        }
+
+    }
+
+    setInterval(function () {
+        trocaImagem()
+    }, 4000);
+
+
+
+
+</script>
+
+
+
+
+
+</body></html>
