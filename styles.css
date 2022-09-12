@@ -65,6 +65,14 @@ body {
     font-weight: bold;
  }
   
+ button:hover {
+    opacity: .8;  
+ }
+
+ button:active{
+    opacity: .5;
+ }
+
  .login-facebook{
     color:#385185;
     font-weight: bold;
